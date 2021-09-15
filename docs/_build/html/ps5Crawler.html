@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ps5Crawler module &mdash; WherePS5  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ps5Crawler" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> WherePS5
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ps5Crawler</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ps5Crawler module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WherePS5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">ps5Crawler</a> &raquo;</li>
+      <li>ps5Crawler module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ps5Crawler.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-ps5Crawler">
+<span id="ps5crawler-module"></span><h1>ps5Crawler module<a class="headerlink" href="#module-ps5Crawler" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.CreateFirefoxDriver">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">CreateFirefoxDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isHeadless</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></span><a class="headerlink" href="#ps5Crawler.CreateFirefoxDriver" title="Permalink to this definition"></a></dt>
+<dd><p>Creating a firefox seleniunm webdriver</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>isHeadless</strong> – (bool) enables headless mode of driver (default false)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(webdriver.FirefoxProfile) created selenium firefox webdriver</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.GetAlphateccSearchResultCount">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">GetAlphateccSearchResultCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ps5Crawler.GetAlphateccSearchResultCount" title="Permalink to this definition"></a></dt>
+<dd><p>get search result count for keyword “ps5” on Alphatecc.com</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p></li>
+<li><p><strong>link</strong> – (str) link to ps5 search page</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(int) search result count</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.GetAvailabilityListForStores">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">GetAvailabilityListForStores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ps5Crawler.GetAvailabilityListForStores" title="Permalink to this definition"></a></dt>
+<dd><p>checks availability for websites in ‘ps5StorePages’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(list[bool]) availability status for each site listed in ‘ps5StorePages’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.GetMessageFromAvailabilityList">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">GetMessageFromAvailabilityList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">availabilityStatusList</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ps5Crawler.GetMessageFromAvailabilityList" title="Permalink to this definition"></a></dt>
+<dd><p>generating readable text message from availability Status bool list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>availabilityStatusList</strong> – (list[bool]) availability statuses for stores listed in ps5StorePages</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(str) availability statuses as readable message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.InitSearchResultCounts">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">InitSearchResultCounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#ps5Crawler.InitSearchResultCounts" title="Permalink to this definition"></a></dt>
+<dd><p>laoding search result counts for sites listed in ‘ps5SearchResultCounts’ and writing them in ‘ps5SearchResultsCount’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.IsAvailableOnAlphatecc">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">IsAvailableOnAlphatecc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ps5Crawler.IsAvailableOnAlphatecc" title="Permalink to this definition"></a></dt>
+<dd><p>checks if ps5 might be available on Alphatecc.de by checking if result count for “ps5” keyword search change
+updates search reslut count in ‘ps5SearchResultCount’ regardless of result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p></li>
+<li><p><strong>link</strong> – (str) link to ps5 search page</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(bool) availability status for ps5</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.IsAvailableOnAlternate">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">IsAvailableOnAlternate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ps5Crawler.IsAvailableOnAlternate" title="Permalink to this definition"></a></dt>
+<dd><p>checks if ps5 is availible on alternate.de by checking if the add to cart form is hidden or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p></li>
+<li><p><strong>link</strong> – (str) link to ps5 store page</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(bool) availability status for ps5</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.IsAvailableOnAmazon">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">IsAvailableOnAmazon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ps5Crawler.IsAvailableOnAmazon" title="Permalink to this definition"></a></dt>
+<dd><p>checks if ps5 is available on amazon.de by checking if element with id #outOfStock exists on page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p></li>
+<li><p><strong>link</strong> – (str) link to ps5 store page</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(bool) availability status for ps5</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.IsAvailableOnEuronics">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">IsAvailableOnEuronics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">selenium.webdriver.firefox.firefox_profile.FirefoxProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ps5Crawler.IsAvailableOnEuronics" title="Permalink to this definition"></a></dt>
+<dd><p>checks if ps5 is available on euronics.de by checking if element with error class is in buybox container element or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>driver</strong> – (webdriver.FirefoxProfile) selenium firefox webdriver to use</p></li>
+<li><p><strong>link</strong> – (str) link to ps5 store page</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(bool) availability status for ps5</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ps5Crawler.main">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ps5Crawler.main" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ps5Crawler.ps5AvailabilityCheckFunctions">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">ps5AvailabilityCheckFunctions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;function</span> <span class="pre">IsAvailableOnAlternate&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">IsAvailableOnAmazon&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">IsAvailableOnEuronics&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">IsAvailableOnAlphatecc&gt;]</span></em><a class="headerlink" href="#ps5Crawler.ps5AvailabilityCheckFunctions" title="Permalink to this definition"></a></dt>
+<dd><p>the links for the websites were ps5 might be available
+order like in ps5AvailabilityCheckFunctions cause the links are used by the functions</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ps5Crawler.ps5AvailableMessageTexts">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">ps5AvailableMessageTexts</span></span><em class="property"><span class="pre">:</span> <span class="pre">list</span></em><em class="property"> <span class="pre">=</span> <span class="pre">['Alternate</span> <span class="pre">(https://www.alternate.de/Sony-Interactive-Entertainment/PlayStation-5-Spielkonsole/html/product/1651220)</span> <span class="pre">\n',</span> <span class="pre">'Amazon</span> <span class="pre">(https://www.amazon.de/Sony-Interactive-Entertainment-PlayStation-5/dp/B08H93ZRK9/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=ps5&amp;qid=1631543211&amp;sr=8-3)</span> <span class="pre">\n',</span> <span class="pre">'Euronics</span> <span class="pre">(https://www.euronics.de/spiele-und-konsolen-film-und-musik/spiele-und-konsolen/playstation-5/spielekonsole/playstation-5-konsole-4061856837826)</span> <span class="pre">\\ņ']</span></em><a class="headerlink" href="#ps5Crawler.ps5AvailableMessageTexts" title="Permalink to this definition"></a></dt>
+<dd><p>the count of items found by “ps5” keyword search the last time checked
+used to check on websites were the ps5 page is disabled when its not in stock</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ps5Crawler.ps5SearchResultCounts">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">ps5SearchResultCounts</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span></em><em class="property"> <span class="pre">=</span> <span class="pre">{'Alphatecc':</span> <span class="pre">0}</span></em><a class="headerlink" href="#ps5Crawler.ps5SearchResultCounts" title="Permalink to this definition"></a></dt>
+<dd><p>main loop
+checking for ps5 availability every 1 min (or 5 min if there were some available last time)
+if available sending whats app message
+#TODO add whatsapp number list and document usage</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ps5Crawler.ps5StorePages">
+<span class="sig-prename descclassname"><span class="pre">ps5Crawler.</span></span><span class="sig-name descname"><span class="pre">ps5StorePages</span></span><em class="property"><span class="pre">:</span> <span class="pre">list</span></em><em class="property"> <span class="pre">=</span> <span class="pre">['https://www.alternate.de/Sony-Interactive-Entertainment/PlayStation-5-Spielkonsole/html/product/1651220',</span> <span class="pre">'https://www.amazon.de/Sony-Interactive-Entertainment-PlayStation-5/dp/B08H93ZRK9/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=ps5&amp;qid=1631543211&amp;sr=8-3',</span> <span class="pre">'https://www.euronics.de/spiele-und-konsolen-film-und-musik/spiele-und-konsolen/playstation-5/spielekonsole/playstation-5-konsole-4061856837826',</span> <span class="pre">'https://www.alphatecc.de/search?sSearch=ps5']</span></em><a class="headerlink" href="#ps5Crawler.ps5StorePages" title="Permalink to this definition"></a></dt>
+<dd><p>message snippets to append when ps5 is available on one of the websites
+order like in ps5AvailabilityCheckFunctions</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="ps5Crawler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, White Ferret Dev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
