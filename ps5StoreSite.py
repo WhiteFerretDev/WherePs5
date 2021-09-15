@@ -1,5 +1,4 @@
 from enum import Enum
-from ps5Crawler import CreateFirefoxDriver
 from selenium import webdriver
 
 
