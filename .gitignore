@@ -3,8 +3,4 @@ __pycache__
 **.inv
 pywhatkit_dbs.txt
 ps5Crawler.py 
-docs/*
-!docs/_build
-docs/_build/doctrees
-
-docs/_build/html/_sources
+docs
