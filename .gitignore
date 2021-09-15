@@ -3,4 +3,4 @@ __pycache__
 **.inv
 pywhatkit_dbs.txt
 ps5Crawler.py 
-docs
+sphinx
