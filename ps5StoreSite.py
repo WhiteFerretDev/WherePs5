@@ -130,6 +130,27 @@ class ps5StoreSite:
         
         return searchResultCount
 
+    
+    def GetAvailabilityMessage(self):
+        """
+        generates message to send when ps5 is available on this site
+
+        :param self:
+        :return: message specifying ps5 is available at this site
+        :rtype: str
+        """
+
+        message : str = ""
+
+        if self.availabilityCheckType == AvailabilityCheckType.SEARCH_RESULT_COUNT_CHECK:
+            message += "PS5 might be available at "
+        else:
+            message += "PS5 is available at "
+
+        message += self.storeSiteLink
+
+        return message
+
 
 def CreateFirefoxDriver(isHeadless : bool = False):
     """

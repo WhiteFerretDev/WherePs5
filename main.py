@@ -1,4 +1,5 @@
 from ps5AvailabilityChecker import ps5AvailabilityChecker
+from ps5AvailabilityMessageSender import ps5AvailabilityMessageSender
 
 
 def main():
@@ -7,6 +8,10 @@ def main():
         #prevent code from being run when sphinx creates documentation
         return
 
-    print(ps5AvailabilityChecker.GetPs5AvailabilityList())
+    messageSender = ps5AvailabilityMessageSender(["+4915141494160"])
+    availabilityList = ps5AvailabilityChecker.GetPs5AvailabilityList()
+    messageSender.SendMessagesForAvailabilityList(availabilityList)
+
+    print(availabilityList)
 
 main()
