@@ -1,5 +1,6 @@
 from enum import Enum
 from selenium import webdriver
+from time import sleep
 
 
 
@@ -71,6 +72,8 @@ class ps5StoreSite:
         :return: (bool)
         """
 
+        #TODO expecption handling
+
         elementsFittingCssSelector : list = driver.find_elements_by_css_selector(targetElementCssSelector)
         if len(elementsFittingCssSelector) == 0:
             return False
@@ -88,6 +91,8 @@ class ps5StoreSite:
         :param targetElementCssSelector: (str) css selector for element holding the search result count value
         :return: (bool)
         """
+
+        #TODO expecption handling
 
         searchResultCount : int = self.__GetPs5SearchResultCountForSite(driver, targetElementCssSelector)
         
@@ -108,24 +113,38 @@ class ps5StoreSite:
         :return: (int) amount of search results for keyword 'ps5' on site
         """
 
-        searchResultCount : int = int(driver.find_element_by_css_selector(targetElementCssSelector).text)
+        #TODO expecption handling
+        searchResultCount : int
+        try:
+            searchResultCount = int(driver.find_element_by_css_selector(targetElementCssSelector).text)
+        
+        except:
+            sleep(5)
+            
+            try:
+                searchResultCount = int(driver.find_element_by_css_selector(targetElementCssSelector).text)
+            except:
+                searchResultCount = self.lastSearchResultCountForSite
+
+
+        
         return searchResultCount
 
 
-    def CreateFirefoxDriver(isHeadless : bool = False):
-        """
-        Creating a firefox seleniunm webdriver
+def CreateFirefoxDriver(isHeadless : bool = False):
+    """
+    Creating a firefox seleniunm webdriver
 
-        :param isHeadless: (bool) enables headless mode of driver (default false)
-        :return: (webdriver.FirefoxProfile) created selenium firefox webdriver
-        """        
+    :param isHeadless: (bool) enables headless mode of driver (default false)
+    :return: (webdriver.FirefoxProfile) created selenium firefox webdriver
+    """        
 
-        options = webdriver.firefox.options.Options()
-        options.headless = isHeadless;
+    options = webdriver.firefox.options.Options()
+    options.headless = isHeadless;
 
-        driver = webdriver.Firefox(options=options)
+    driver = webdriver.Firefox(options=options)
 
-        return driver
+    return driver
 
 
 
